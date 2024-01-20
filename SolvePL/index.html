@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Simplex Solver</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <script type="text/javascript" src="assets/js/Solver/simplex.js"></script>
+  <style>
+    body {
+      background: linear-gradient(to right, #fff, hsl(59, 69%, 65%));
+    }
+
+    #solution {
+      min-width: 100%;
+      height: 50px;
+      text-align: center;
+      font-size: 18px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    #option {
+      min-width: 80%;
+      font-size: 16px;
+      border-radius: 10px;
+    }
+
+    #btn {
+      width: 140px;
+      height: 30px;
+      border: 1px solid #000000;
+      border-radius: 10px;
+      font: bold;
+      font-size: 14px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      margin-top: 20px;
+    }
+
+    #tabl {
+      border: 1px solid #000000;
+      border-radius: 10px;
+    }
+
+    #pl {
+      border: 1px solid #000000;
+      border-radius: 10px;
+    }
+    #ss{
+      font-size: 25px;
+      margin-top: 20px;
+    }
+    #mm{
+      font-size: 20px;
+      
+    }
+    #tt{
+      font-size: 20px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+  <div class="jumbotron masthead">
+    <div class="container">
+      <h1><ul>Simplex algorithm</ul></h1>
+      <center><h1> EL Khour Razan Group 06</h1></center>
+    </div>
+  </div>
+  <br>
+  <center>
+    <form name="theSpreadsheet">
+      <h1>Simplex Solver</h1>
+
+
+      <table class="table-striped active">
+
+        <tr>
+          <td align=center>
+            <b id="tt">Type your linear programming problem below. (Press "Example" to see how to set it up.)</b><br>
+            <br>
+            <textarea id="pl" name="input" rows=5 cols=80></textarea>
+          </td>
+        </tr>
+
+
+
+
+        <tr>
+          <td>
+            <center><br><b id="mm">Mode:</b> <select id="option" NAME="Mode" SIZE=3>
+                <OPTION SELECTED>Decimal</OPTION>
+                <OPTION>Fraction</OPTION>
+                <OPTION>Integer</OPTION>
+              </SELECT>
+            </center>
+          </td>
+        </tr>
+
+        <center><input type=hidden size=2 value="6" name="acc"></center>
+
+        <input id="btn" type="button" class="btn btn-primary btn-small" value="Solve" onClick="doIt(2); doIt(1)"> &nbsp;
+
+        <input id="btn" type="button" class="btn btn-primary btn-small" value="Example" onClick="doIt(5)"> &nbsp;
+
+        <input id="btn" type="button" class="btn btn-primary btn-mini" value="Erase Everything" onClick="doIt(3)">
+        &nbsp;
+
+        <br>
+        <br>
+
+
+        <tr>
+
+          <td align=center>
+
+           <br> <b id="tt">The tableaus (steps) will appear here.</b><br>
+
+            <br>
+
+            <textarea id="tabl" style="min-width: 100%" name="output" rows=12 cols=80></textarea>
+
+          </td>
+
+        </tr>
+        <tr>
+          <td align=center><b id="ss">Solution:</b><br><b><input id="solution" type=text size=80 disabled name="expr"
+                value="Optimal solution will appear here."></b>
+
+            <br>
+      </table>
+
+    </form>
+
+  </center>
+
+
+</body>
+
+</html>
